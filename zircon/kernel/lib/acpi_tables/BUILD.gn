@@ -18,6 +18,7 @@ library("acpi_tables") {
   # TODO: testonly
   deps = [
     ":test",
+    "$zx/kernel/lib/acpi_lite",
   ]
 }
 

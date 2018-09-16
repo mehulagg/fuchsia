@@ -134,9 +134,6 @@ library("x86") {
     # <arch/aspace.h> has #include <fbl/unique_ptr.h>.
     "$zx/system/ulib/fbl:headers",
 
-    # <arch/x86/acpi.h> has #include <acpica/acpi.h>.
-    "$zx/third_party/lib/acpica:headers",
-
     # <arch/x86/ioport.h> has #include <bitmap/rle-bitmap.h>.
     "$zx/system/ulib/bitmap:headers",
 

@@ -52,6 +52,7 @@ source_set("syscalls") {
   ]
   if (current_cpu == "x64") {
     deps += [ "$zx/kernel/platform/pc" ]
+    deps += [ "$zx/third_party/lib/acpica" ]
   }
 }
 

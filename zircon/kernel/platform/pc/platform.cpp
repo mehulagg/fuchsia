@@ -27,6 +27,7 @@
 #include <lib/acpi_tables.h>
 #include <lib/debuglog.h>
 #include <libzbi/zbi-cpp.h>
+#include <lib/acpi_lite.h>
 #include <lk/init.h>
 #include <mexec.h>
 #include <platform.h>
@@ -777,6 +778,9 @@ void platform_early_init(void) {
 
     /* if the bootloader has framebuffer info, use it for early console */
     platform_early_display_init();
+
+    /* initialize the ACPI parser */
+    acpi_lite_init(bootloader.acpi_rsdp);
 
     /* initialize the boot memory reservation system */
     boot_reserve_init();
