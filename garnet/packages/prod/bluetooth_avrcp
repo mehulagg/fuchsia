@@ -1,0 +1,5 @@
+{
+    "packages": [
+        "//src/connectivity/bluetooth/profiles/bt-avrcp"
+    ]
+}

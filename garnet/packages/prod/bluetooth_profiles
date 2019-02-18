@@ -1,6 +1,7 @@
 {
     "imports": [
         "garnet/packages/prod/bluetooth_a2dp",
+        "garnet/packages/prod/bluetooth_avrcp",
         "garnet/packages/prod/bluetooth_hid"
     ]
 }
