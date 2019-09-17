@@ -68,6 +68,7 @@ if (current_toolchain == default_toolchain) {
       "asm.S",
       "boot-mmu.cc",
       "cache-ops.S",
+      "dap.cc",
       "debugger.cc",
       "exceptions.S",
       "exceptions_c.cc",
