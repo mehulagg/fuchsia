@@ -4,6 +4,23 @@
 
 zx_library("pci") {
   sdk = "source"
-  sdk_headers = [ "include/lib/pci/root.h" ]
-  sources = []
+  sdk_headers = [ "include/lib/pci/root.h", "include/lib/pci/root_host.h" ]
+  sources = ["root_host.cc"]
+  public_deps = [
+        "$zx/system/banjo/ddk.protocol.pciroot",
+        "$zx/system/ulib/region-alloc",
+  ]
+}
+
+zx_test("pci-roothost") {
+  sources = [
+    "test/root_host-test.cc"
+  ]
+  deps = [
+    "$zx/system/dev/lib/fake_ddk",
+    "$zx/system/dev/lib/fake-resource",
+    "$zx/system/ulib/zxtest",
+    "$zx/system/ulib/fdio",
+    ":pci"
+  ]
 }

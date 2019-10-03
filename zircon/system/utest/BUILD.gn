@@ -86,6 +86,7 @@ if (current_cpu != "") {
       "$zx/system/dev/lib/fake-resource/test:fake-resource",
       "$zx/system/dev/lib/mock-mmio-reg:mock-mmio-reg-test",
       "$zx/system/dev/lib/mt8167:mt8167-audio-lib-test",
+      "$zx/system/dev/lib/pci:pci-roothost",
       "$zx/system/dev/lib/scsi:scsilib-disk-test",
       "$zx/system/dev/lib/usb:usb-lib-test",
       "$zx/system/dev/light-sensor/lite-on:ltr-578als-test",
